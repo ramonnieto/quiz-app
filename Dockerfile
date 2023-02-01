@@ -12,7 +12,8 @@ RUN npm install
 
 # Copy over the source code
 COPY . .
-
+RUN chown :0 .
+USER 1001
 # Expose the necessary port
 EXPOSE 8080
 
